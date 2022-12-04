@@ -1,5 +1,7 @@
 import { d1p1 } from './day1/puzzle1'
 import { d1p2 } from './day1/puzzle2'
+import { d2p1 } from './day2/puzzle1'
+import { d2p2 } from './day2/puzzle2'
 
 const args = process.argv.slice(2)
 
@@ -13,6 +15,10 @@ const solutions: Solutions = {
   '1': {
     '1': d1p1,
     '2': d1p2,
+  },
+  '2': {
+    '1': d2p1,
+    '2': d2p2,
   },}
 
 const day = args[0]
