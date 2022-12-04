@@ -1,8 +1,4 @@
-import { readInput } from '../input'
-
-export function d1p2(): number {
-  const input = readInput(1)
-  
+export default function solution(input: string): number {  
   const elfs = input.split('\n\n')
 
   const maxs = []

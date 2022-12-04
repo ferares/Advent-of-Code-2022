@@ -1,8 +1,4 @@
-import { readInput } from '../input'
-
-export function d2p1(): number {
-  const input = readInput(2)
-  
+export default function solution(input: string): number {  
   const plays = input.split('\n')
   
   let totalScore = 0

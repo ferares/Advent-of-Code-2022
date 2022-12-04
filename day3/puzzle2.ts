@@ -1,10 +1,6 @@
-import { readInput } from '../input'
-
 import { getItemPriority } from './helpers'
 
-export function d3p2(): number {
-  const input = readInput(3)
-
+export default function solution(input: string): number {
   const rucksacks = input.split('\n')
 
   let priorities = 0

@@ -1,8 +1,4 @@
-import { readInput } from '../input'
-
-export function d4p1(): number {
-  const input = readInput(4)
-
+export default function solution(input: string): number {
   const pairs = input.split('\n')
 
   let totalContained = 0

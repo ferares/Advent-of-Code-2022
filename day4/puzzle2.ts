@@ -1,8 +1,4 @@
-import { readInput } from '../input'
-
-export function d4p2(): number {
-  const input = readInput(4)
-
+export default function solution(input: string): number {
   const pairs = input.split('\n')
 
   let totalOverlaps = 0

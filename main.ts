@@ -1,41 +1,15 @@
-import { d1p1 } from './day1/puzzle1'
-import { d1p2 } from './day1/puzzle2'
-import { d2p1 } from './day2/puzzle1'
-import { d2p2 } from './day2/puzzle2'
-import { d3p1 } from './day3/puzzle1'
-import { d3p2 } from './day3/puzzle2'
-import { d4p1 } from './day4/puzzle1'
-import { d4p2 } from './day4/puzzle2'
+import { readInput } from './input'
 
 const args = process.argv.slice(2)
 
-type Solutions = {
-  [index: string]: {
-    [index: string]: () => any,
-  }
-}
-
-const solutions: Solutions = {
-  '1': {
-    '1': d1p1,
-    '2': d1p2,
-  },
-  '2': {
-    '1': d2p1,
-    '2': d2p2,
-  },
-  '3': {
-    '1': d3p1,
-    '2': d3p2,
-  },
-  '4': {
-    '1': d4p1,
-    '2': d4p2,
-  },
+async function runSolution(day: string, puzzle: string) {
+  const solution = await import(`./day${day}/puzzle${puzzle}`)
+  const input = readInput(day)
+  console.log(solution.default(input))
 }
 
 const day = args[0]
 const puzzle = args[1]
 if ((day) && (puzzle)) {
-  console.log(solutions[day][puzzle]())
+  runSolution(day, puzzle)
 }
