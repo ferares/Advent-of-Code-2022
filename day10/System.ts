@@ -13,8 +13,8 @@ export class System {
   }
 
   drawPixel() {
-    if (this.isSpriteInView()) this.screen += '#'
-    else this.screen += '.'
+    if (this.isSpriteInView()) this.screen += '▓'
+    else this.screen += '░'
   }
   
   isSpriteInView(): boolean {
